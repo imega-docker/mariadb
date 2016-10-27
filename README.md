@@ -2,11 +2,13 @@
 
 This is docker image to run a MySQL database server.
 
-Image size: 80 MB
+[![](https://images.microbadger.com/badges/image/imega/mysql.svg)](http://microbadger.com/images/imega/mysql "Get your own image badge on microbadger.com") [![CircleCI](https://circleci.com/gh/imega-docker/mysql.svg?style=svg)](https://circleci.com/gh/imega-docker/mysql) [![GitHub stars](https://img.shields.io/github/stars/badges/shields.svg?style=social&label=Star&maxAge=2592000)](https://github.com/imega-docker/mysql)
 
-From image: gliderlabs/alpine:3.1
+Image size: 146.8 MB
 
-Mysql Server: 5.5.40-r1
+From image: alpine:3.4
+
+Mysql Server: 10.1.18-r0
 
 ## FREE ACCESS to server! Why?
 
@@ -23,7 +25,7 @@ Connect your DB thouth volume.
 Mount empty folder into volume.
 
 ## INCLUDE YOUR CONFIG
-This is a simple 
+This is a simple
 
 ```
 -v /my/custom/configs:/etc/mysql/conf.d
@@ -95,4 +97,28 @@ mysql> select * from users;
 
 Now you see in folder /tmp/empty/db
 
-### Thanks for reading!
+## Thanks for reading!
+
+### Alpine Packages
+  - mariadb-common (10.1.18-r0)
+  - musl (1.1.14-r13)
+  - busybox (1.24.2-r11)
+  - libaio (0.3.110-r0)
+  - zlib (1.2.8-r2)
+  - libcrypto1.0 (1.0.2j-r0)
+  - ncurses-terminfo-base (6.0-r7)
+  - ncurses-terminfo (6.0-r7)
+  - ncurses-libs (6.0-r7)
+  - libssl1.0 (1.0.2j-r0)
+  - libgcc (5.3.0-r0)
+  - libstdc++ (5.3.0-r0)
+  - mariadb (10.1.18-r0)
+
+## The MIT License (MIT)
+
+Copyright © 2015 iMega <info@imega.ru>
+
+Permission is hereby granted, free of charge, to any person obtaining a copy of this software and associated documentation files (the “Software”), to deal in the Software without restriction, including without limitation the rights to use, copy, modify, merge, publish, distribute, sublicense, and/or sell copies of the Software, and to permit persons to whom the Software is furnished to do so, subject to the following conditions:
+
+The above copyright notice and this permission notice shall be included in all copies or substantial portions of the Software.
+THE SOFTWARE IS PROVIDED “AS IS”, WITHOUT WARRANTY OF ANY KIND, EXPRESS OR IMPLIED, INCLUDING BUT NOT LIMITED TO THE WARRANTIES OF MERCHANTABILITY, FITNESS FOR A PARTICULAR PURPOSE AND NONINFRINGEMENT. IN NO EVENT SHALL THE AUTHORS OR COPYRIGHT HOLDERS BE LIABLE FOR ANY CLAIM, DAMAGES OR OTHER LIABILITY, WHETHER IN AN ACTION OF CONTRACT, TORT OR OTHERWISE, ARISING FROM, OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN THE SOFTWARE.

@@ -1,20 +1,10 @@
-FROM gliderlabs/alpine:3.1
+FROM imega/base-builder:1.2.0
 
 MAINTAINER Dmitry Gavriloff <info@imega.ru>
 
-EXPOSE 3306
+ADD build/rootfs.tar.gz /
 
-RUN apk-install mysql && \
-    mkdir -p /var/lib/mysql && \
-    mkdir -p /etc/mysql/conf.d && \
-    { \
-        echo '[mysqld]'; \
-        echo 'user = root'; \
-        echo 'datadir = /var/lib/mysql'; \
-        echo 'port = 3306'; \
-        echo 'log-bin = /var/lib/mysql/mysql-bin'; \
-        echo '!includedir /etc/mysql/conf.d/'; \
-    } > /etc/mysql/my.cnf
+EXPOSE 3306
 
 VOLUME ["/var/lib/mysql", "/etc/mysql/conf.d/"]
 
