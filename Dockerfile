@@ -6,7 +6,7 @@ ADD build/rootfs.tar.gz /
 
 EXPOSE 3306
 
-VOLUME ["/var/lib/mysql", "/etc/mysql/conf.d/"]
+VOLUME ["/data", "/etc/mysql/conf.d/"]
 
 ENTRYPOINT ["mysqld"]
 

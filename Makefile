@@ -12,7 +12,7 @@ build:
 
 test:
 	@docker build -t imega/mysql:test .
-	@docker run -d --name server_db imega/mysql
+	@docker run -d --name server_db imega/mysql:test
 	@docker run --rm=$(DOCKER_RM) \
 		-v $(CURDIR)/tests:/data \
 		--link server_db:server \
