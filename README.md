@@ -33,7 +33,7 @@ This is a simple
 
 ## QUICK START
 ```
-$ docker run --rm -v /my/empty/database:/var/lib/mysql -p 3306:3306 imega/mysql
+$ docker run -d imega/mysql
 ```
 
 ## TRY NOW
@@ -42,7 +42,7 @@ Make container with mysql server
 ```
 $ mkdir -p /tmp/empty/db
 
-$ docker run --rm --name "mysqlsrv" -v /tmp/empty/db:/var/lib/mysql imega/mysql
+$ docker run --rm --name "mysqlsrv" -v /tmp/empty/db:/data imega/mysql
 
 ```
 Ok. Make empty folder for data and server up.
@@ -50,14 +50,11 @@ Ok. Make empty folder for data and server up.
 Now, you make container with mysql client.
 
 ```
-$ docker run --rm --link mysqlsrv:mysqlsrv -it gliderlabs/alpine:latest /bin/sh
+$ docker run --rm -it --link mysqlsrv:server imega/mysql-client mysql --host=server
 ```
 
 Ok. You into container.
 
-```
-# mysql -h mysqlserver
-```
 Woooow!
 
 ```
