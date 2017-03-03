@@ -4,11 +4,11 @@ This is docker image to run a MySQL database server.
 
 [![](https://images.microbadger.com/badges/image/imega/mysql.svg)](http://microbadger.com/images/imega/mysql "Get your own image badge on microbadger.com") [![CircleCI](https://circleci.com/gh/imega-docker/mysql.svg?style=svg)](https://circleci.com/gh/imega-docker/mysql) [![GitHub stars](https://img.shields.io/github/stars/badges/shields.svg?style=social&label=Star&maxAge=2592000)](https://github.com/imega-docker/mysql)
 
-Image size: 146.8 MB
+Image size: 149.4 MB
 
-From image: alpine:3.4
+From image: alpine:3.5
 
-Mysql Server: 10.1.18-r0
+Mysql Server: 10.1.21-r0
 
 ## FREE ACCESS to server! Why?
 
@@ -97,19 +97,20 @@ Now you see in folder /tmp/empty/db
 ## Thanks for reading!
 
 ### Alpine Packages
-  - mariadb-common (10.1.18-r0)
-  - musl (1.1.14-r13)
-  - busybox (1.24.2-r11)
+  - musl (1.1.15-r6)
+  - mariadb-common (10.1.21-r0)
+  - busybox (1.25.1-r0)
   - libaio (0.3.110-r0)
-  - zlib (1.2.8-r2)
-  - libcrypto1.0 (1.0.2j-r0)
+  - libressl2.4-libcrypto (2.4.4-r0)
   - ncurses-terminfo-base (6.0-r7)
   - ncurses-terminfo (6.0-r7)
   - ncurses-libs (6.0-r7)
-  - libssl1.0 (1.0.2j-r0)
-  - libgcc (5.3.0-r0)
-  - libstdc++ (5.3.0-r0)
-  - mariadb (10.1.18-r0)
+  - libressl2.4-libssl (2.4.4-r0)
+  - libgcc (6.2.1-r1)
+  - libstdc++ (6.2.1-r1)
+  - zlib (1.2.8-r2)
+  - mariadb (10.1.21-r0)
+  - mysql (10.1.21-r0)
 
 ## The MIT License (MIT)
 

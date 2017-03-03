@@ -1,3 +1,8 @@
+### 10.1.21
+
+  * Use base image on alpine 3.5
+  * Mysql: 10.1.21-r0
+
 ### 10.1.18
 
   * Use base image on alpine 3.4
